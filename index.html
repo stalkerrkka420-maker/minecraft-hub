@@ -1,224 +1,1289 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090d0b">
-<meta name="description" content="Discover Minecraft mods, shaders, resource packs, builds and useful tools.">
-<title>BLOCKVERSE — Minecraft Hub</title>
-<style>
-:root{--bg:#090d0b;--panel:#111914;--green:#71f59a;--muted:#9aa99f;--border:#24352a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:#f3fff5;font:16px/1.6 system-ui,sans-serif}
-a{color:inherit;text-decoration:none}
-button,input,select{font:inherit}
-button,a,.card{transition:.2s}
-button{cursor:pointer}
-header{position:sticky;top:0;z-index:5;background:#090d0bf2;border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
-nav{max-width:1150px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.logo{font-size:21px;font-weight:900;letter-spacing:1px}
-.logo span,.accent{color:var(--green)}
-.links{display:flex;gap:20px;flex-wrap:wrap}
-.links a{color:var(--muted);font-size:14px}
-.links a:hover{color:var(--green)}
-.hero{max-width:1150px;margin:auto;padding:90px 22px 65px;position:relative}
-.hero:before{content:"";position:absolute;inset:20px 0 0;background:radial-gradient(ellipse at 70% 30%,#18542b55,transparent 55%);pointer-events:none}
-.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
-h1{font-size:clamp(42px,8vw,82px);line-height:1.04;letter-spacing:-3px;max-width:800px;margin:16px 0}
-h2{font-size:clamp(27px,4vw,38px);line-height:1.2}
-.hero p,.muted{color:var(--muted)}
-.hero p{max-width:590px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.btn{display:inline-block;border:1px solid var(--border);padding:11px 17px;border-radius:8px;background:var(--panel);color:#fff}
-.btn.primary{background:var(--green);color:#07110a;border-color:var(--green);font-weight:800}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
-.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:35px;color:var(--muted);font-size:13px}
-.stats strong{color:#fff;display:block;font-size:19px}
-section{max-width:1150px;margin:auto;padding:48px 22px}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap;margin-bottom:23px}
-.section-head h2{margin:5px 0}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
-input,select{background:var(--panel);color:#fff;border:1px solid var(--border);border-radius:8px;padding:12px;min-width:0}
-#search{flex:1;min-width:190px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:13px;padding:20px;min-width:0}
-.card:hover{border-color:#55b975;transform:translateY(-3px)}
-.card-icon{font-size:29px}
-.card h3{margin:8px 0}
-.card p{color:var(--muted);font-size:14px}
-.tag{display:inline-block;border:1px solid var(--border);color:var(--green);border-radius:5px;padding:3px 8px;font-size:11px}
-.card .btn{margin-top:8px;font-size:13px}
-.tool-panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:24px}
-.tool-row{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
-input[type=color]{width:75px;height:55px;padding:4px;cursor:pointer}
-#swatch{width:90px;height:55px;border-radius:8px;background:#71f59a;border:1px solid var(--border)}
-#hex{width:145px}
-.note{font-size:12px;color:var(--muted)}
-footer{border-top:1px solid var(--border);padding:28px 22px;color:var(--muted);text-align:center;font-size:13px}
-[hidden]{display:none!important}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:60px}.links{gap:12px}h1{letter-spacing:-1.5px}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.links{width:100%;justify-content:space-between}.stats{gap:18px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17251c">
+  <meta name="description" content="BlockyBase — pikselowe inspiracje do budowania, palety bloków, mody, paczki zasobów i serwery dla graczy Minecraft.">
+  <title>BlockyBase — Build. Explore. Create.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101713;
+      --panel: #19231d;
+      --panel2: #202d24;
+      --green: #75d34b;
+      --green2: #a1f36d;
+      --text: #f2f5ed;
+      --muted: #a3b1a4;
+      --line: #354638;
+      --brown: #80512f;
+      --yellow: #f2cb65;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, #233c29 0%, transparent 48%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    button:focus-visible, a:focus-visible, input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
+
+    .wrap { width: min(1160px, calc(100% - 36px)); margin: auto; }
+
+    .pixel {
+      font-family: "Press Start 2P", monospace;
+      line-height: 1.8;
+      letter-spacing: -1px;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      text-align: center;
+      background: #304b29;
+      border-bottom: 2px solid #527d3d;
+      color: #e8ffdb;
+      font-size: 12px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(16, 23, 19, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      font-size: 19px;
+      letter-spacing: -1px;
+    }
+
+    .brand-mark {
+      width: 39px;
+      height: 39px;
+      flex-shrink: 0;
+      border: 3px solid #111b13;
+      background:
+        linear-gradient(90deg, transparent 47%, #386e2e 48% 55%, transparent 56%),
+        linear-gradient(0deg, #714626 0 30%, #875b35 30% 43%, transparent 43%),
+        linear-gradient(0deg, transparent 0 45%, #54a83b 45% 70%, #83d954 70%);
+      box-shadow: 3px 3px 0 #38553a;
+      image-rendering: pixelated;
+    }
+
+    .brand span { color: var(--green); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: #d4ded4;
+    }
+
+    .nav-links a:hover { color: var(--green2); }
+
+    .nav-cta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 7px;
+      background: var(--green);
+      color: #132010;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #3b7929;
+      transition: transform .15s, filter .15s;
+    }
+
+    .nav-cta:hover, .btn:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+    }
+
+    .btn.secondary {
+      background: #2b3a2f;
+      color: white;
+      box-shadow: 0 4px 0 #101a13;
+      border: 1px solid #49634b;
+    }
+
+    .btn.small { padding: 9px 12px; font-size: 12px; }
+    .btn.full { width: 100%; }
+
+    .hero { padding: 76px 0 55px; overflow: hidden; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 11px;
+      border: 1px solid #527748;
+      border-radius: 5px;
+      background: #203a24;
+      color: var(--green2);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      box-shadow: 0 0 10px var(--green);
+      display: inline-block;
+    }
+
+    h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.12;
+      letter-spacing: -3px;
+    }
+
+    h1 .green { color: var(--green); }
+
+    .hero p {
+      max-width: 580px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 27px;
+    }
+
+    .mini-stats {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .mini-stats strong { display: block; font-size: 18px; }
+    .mini-stats span { font-size: 11px; color: var(--muted); }
+
+    /* Original CSS pixel landscape — no copied game textures */
+    .scene {
+      position: relative;
+      min-height: 365px;
+      border: 4px solid #39523b;
+      border-radius: 5px;
+      overflow: hidden;
+      background: linear-gradient(#83c9e8 0%, #b8e6ee 56%, #e6d99b 57%, #86b957 100%);
+      box-shadow: 9px 9px 0 #0a100c, 0 0 60px #72d14a15;
+      isolation: isolate;
+    }
+
+    .sun {
+      position: absolute;
+      width: 53px;
+      height: 53px;
+      background: #ffe38a;
+      top: 34px;
+      right: 47px;
+      box-shadow: 0 0 0 8px #ffe38a22;
+    }
+
+    .cloud {
+      position: absolute;
+      height: 17px;
+      width: 78px;
+      background: #f4fcf7;
+      top: 65px;
+      left: 25px;
+      box-shadow: 16px -13px 0 #f4fcf7, 32px 0 0 #f4fcf7;
+    }
+
+    .mountain {
+      position: absolute;
+      bottom: 103px;
+      width: 180px;
+      height: 130px;
+      background: #6d9c83;
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    }
+
+    .mountain.one { left: -35px; }
+    .mountain.two {
+      right: -25px;
+      width: 230px;
+      height: 160px;
+      background: #4f8269;
+    }
+
+    .distant-tree {
+      position: absolute;
+      bottom: 95px;
+      width: 23px;
+      height: 67px;
+      background: #70482d;
+      box-shadow: 0 -35px 0 17px #337a42, 0 -17px 0 22px #41994c;
+    }
+
+    .tree-a { left: 50px; }
+    .tree-b { right: 48px; transform: scale(.8); }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      height: 115px;
+      width: 100%;
+      background: repeating-linear-gradient(90deg, #91643b 0 31px, #81552f 31px 33px);
+      border-top: 13px solid #5eac3c;
+    }
+
+    .ground:before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      height: 6px;
+      width: 100%;
+      background: repeating-linear-gradient(90deg, #8de256 0 16px, #5db33d 16px 32px);
+    }
+
+    .pixel-house {
+      position: absolute;
+      bottom: 83px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 143px;
+      height: 113px;
+      background:
+        linear-gradient(90deg, transparent 0 17%, #543c2a 17% 28%, transparent 28% 72%, #543c2a 72% 83%, transparent 83%),
+        repeating-linear-gradient(90deg, #c99c62 0 19px, #b7874e 19px 22px);
+      border: 4px solid #704b2c;
+      box-shadow: 7px 7px 0 #5d4029;
+    }
+
+    .pixel-house:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -18px;
+      width: 170px;
+      height: 48px;
+      background: repeating-linear-gradient(90deg, #9a4e32 0 18px, #b75d38 18px 36px);
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      filter: drop-shadow(3px 3px 0 #6b3829);
+    }
+
+    .pixel-house:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 51px;
+      width: 31px;
+      height: 55px;
+      background: #513b2c;
+      border: 3px solid #3a2c20;
+    }
+
+    .window {
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      width: 23px;
+      height: 23px;
+      background: #a5e5ef;
+      border: 4px solid #755033;
+    }
+
+    .window.left { left: 13px; }
+    .window.right { right: 13px; }
+
+    .scene-label {
+      position: absolute;
+      z-index: 3;
+      left: 13px;
+      bottom: 13px;
+      background: #101713e8;
+      border: 1px solid #527748;
+      padding: 8px 10px;
+      font-size: 10px;
+      color: #e7f4df;
+    }
+
+    .pixel-spark {
+      position: absolute;
+      color: white;
+      font-size: 20px;
+    }
+
+    .spark-a { top: 125px; left: 30px; }
+    .spark-b { top: 170px; right: 37px; }
+
+    .section { padding: 66px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 27px;
+    }
+
+    .kicker {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0;
+      font-size: clamp(23px, 3vw, 34px);
+      letter-spacing: -1.5px;
+      line-height: 1.3;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 520px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .category {
+      padding: 20px;
+      min-height: 165px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #223126, #18221b);
+      transition: transform .2s, border-color .2s;
+    }
+
+    .category:hover {
+      transform: translateY(-4px);
+      border-color: var(--green);
+    }
+
+    .category-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 15px;
+      font-size: 27px;
+      border: 2px solid #42633e;
+      background: #30472d;
+      box-shadow: 3px 3px 0 #101713;
+    }
+
+    .category h3 { margin: 0 0 5px; font-size: 15px; }
+    .category p { margin: 0; color: var(--muted); font-size: 12px; }
+
+    .palette-section {
+      background: linear-gradient(120deg, #17251a, #18261d 55%, #213323);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .palette-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .palette-intro p { color: var(--muted); font-size: 14px; }
+
+    .palette-box {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: #111a14;
+      border: 1px solid #3d5b3f;
+      box-shadow: 6px 6px 0 #0a100c;
+    }
+
+    .palette-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 17px 0;
+    }
+
+    select {
+      min-width: 0;
+      flex: 1;
+      background: #202d24;
+      color: white;
+      border: 1px solid #4a624b;
+      border-radius: 7px;
+      padding: 11px;
+    }
+
+    .palette-name {
+      font-size: 17px;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .palette-desc { color: var(--muted); font-size: 12px; }
+
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 11px;
+      margin: 20px 0;
+    }
+
+    .block-item { min-width: 0; text-align: center; }
+
+    .block-art {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 85px;
+      margin: auto;
+      border: 3px solid #0b120d;
+      box-shadow: 3px 3px 0 #3d4c3e;
+      image-rendering: pixelated;
+      position: relative;
+    }
+
+    .block-art:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 48%, #ffffff13 49% 52%, transparent 53%),
+        linear-gradient(0deg, transparent 48%, #00000018 49% 52%, transparent 53%);
+      background-size: 16px 16px;
+    }
+
+    .grass {
+      background: linear-gradient(#65bb43 0 29%, #805a39 29% 100%);
+      background-image:
+        linear-gradient(90deg, transparent 50%, #ffffff15 50%),
+        linear-gradient(#69c74a 0 27%, #845c3c 27% 100%);
+    }
+
+    .oak {
+      background:
+        repeating-linear-gradient(90deg, transparent 0 9px, #00000020 9px 12px),
+        repeating-linear-gradient(0deg, #9d7044 0 11px, #b98b54 11px 20px);
+    }
+
+    .stone {
+      background:
+        linear-gradient(45deg, transparent 45%, #ffffff13 46% 51%, transparent 52%),
+        repeating-linear-gradient(0deg, #777e7c 0 13px, #686f6d 13px 16px);
+    }
+
+    .brick {
+      background:
+        repeating-linear-gradient(0deg, transparent 0 15px, #442b24 15px 18px),
+        repeating-linear-gradient(90deg, #a9543b 0 20px, #502d26 20px 23px, #b65d41 23px 42px);
+    }
+
+    .sand {
+      background:
+        radial-gradient(#bda46b 1px, transparent 2px),
+        #e1ce91;
+      background-size: 9px 9px;
+    }
+
+    .spruce {
+      background:
+        repeating-linear-gradient(90deg, transparent 0 8px, #00000020 8px 11px),
+        repeating-linear-gradient(0deg, #4d382b 0 12px, #6c4a32 12px 24px);
+    }
+
+    .moss {
+      background:
+        radial-gradient(#8cbd55 2px, transparent 3px),
+        linear-gradient(#587c43, #6b5137);
+      background-size: 12px 12px;
+    }
+
+    .darkstone {
+      background:
+        repeating-linear-gradient(45deg, transparent 0 8px, #ffffff0b 8px 10px),
+        #41464b;
+    }
+
+    .whiteblock {
+      background:
+        radial-gradient(#d5d5c8 1px, transparent 2px),
+        #eeeede;
+      background-size: 10px 10px;
+    }
+
+    .copper {
+      background:
+        repeating-linear-gradient(90deg, transparent 0 11px, #00000019 11px 14px),
+        #b9794d;
+    }
+
+    .glass {
+      background:
+        linear-gradient(135deg, transparent 35%, #ffffff80 36% 40%, transparent 41%),
+        #8bcfda;
+    }
+
+    .block-item span {
+      display: block;
+      margin-top: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .palette-note {
+      color: #8fa08e;
+      font-size: 10px;
+      margin-top: 15px;
+    }
+
+    .searchbar {
+      display: flex;
+      gap: 10px;
+      width: min(100%, 480px);
+    }
+
+    .searchbar input {
+      flex: 1;
+      min-width: 0;
+      background: #1b271e;
+      color: white;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 12px 14px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: transform .2s, border-color .2s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      border-color: #608b50;
+    }
+
+    .resource-visual {
+      height: 145px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .resource-visual .big-emoji {
+      position: relative;
+      z-index: 1;
+      font-size: 62px;
+      filter: drop-shadow(4px 5px 0 #101713);
+    }
+
+    .visual-build {
+      background:
+        linear-gradient(0deg, #71472d 0 23%, #57a43a 23% 31%, transparent 31%),
+        linear-gradient(135deg, #355e3d, #9acb75);
+    }
+
+    .visual-mod {
+      background:
+        radial-gradient(circle at 50% 45%, #7bce54 0 14%, transparent 15%),
+        linear-gradient(135deg, #183e34, #294d66);
+    }
+
+    .visual-server {
+      background:
+        linear-gradient(0deg, #583e2b 0 25%, transparent 25%),
+        linear-gradient(135deg, #263c68, #4d7f9d);
+    }
+
+    .visual-pack {
+      background:
+        repeating-linear-gradient(45deg, #2e472f 0 12px, #39573a 12px 24px);
+    }
+
+    .visual-guide {
+      background:
+        radial-gradient(circle at 50% 30%, #e6ce83 0 12%, transparent 13%),
+        linear-gradient(135deg, #68472e, #a6a06a);
+    }
+
+    .visual-community {
+      background:
+        radial-gradient(circle at 20% 20%, #74c85c 0 7%, transparent 8%),
+        radial-gradient(circle at 80% 70%, #e5bb61 0 9%, transparent 10%),
+        linear-gradient(135deg, #263a2b, #516c45);
+    }
+
+    .resource-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+      padding: 19px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 8px;
+      background: #2c402c;
+      color: #b5f59a;
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .resource-content h3 { margin: 12px 0 7px; font-size: 17px; }
+    .resource-content p { color: var(--muted); font-size: 12px; margin: 0 0 16px; }
+    .resource-content .btn { margin-top: auto; font-size: 12px; }
+
+    .notice {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--yellow);
+      background: #25281d;
+      color: #d7d9c7;
+      font-size: 12px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .about-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .about-card h3 { margin-top: 0; }
+    .about-card p, .about-card li { color: var(--muted); font-size: 13px; }
+    .about-card ul { padding-left: 19px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: #0b110d;
+      padding: 35px 0 22px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .footer-top p {
+      max-width: 490px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover { color: var(--green); }
+
+    .disclaimer {
+      border-top: 1px solid #29372c;
+      margin-top: 25px;
+      padding-top: 18px;
+      font-size: 10px;
+      color: #849184;
+    }
+
+    .copyright {
+      margin-top: 13px;
+      color: #758276;
+      font-size: 10px;
+    }
+
+    .empty {
+      display: none;
+      padding: 22px;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .palette-layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 45px; }
+      .scene { max-width: 600px; width: 100%; margin: 0 auto; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .resource-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { gap: 12px; }
+      .nav-links > a:not(.nav-cta) { display: none; }
+    }
+
+    @media (max-width: 540px) {
+      .wrap { width: min(100% - 24px, 1160px); }
+      .brand { font-size: 15px; }
+      .nav { min-height: 65px; }
+      .nav-cta { padding: 10px; font-size: 11px; }
+      h1 { letter-spacing: -1.5px; }
+      .hero p { font-size: 14px; }
+      .section { padding: 45px 0; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .category-grid, .resource-grid, .about-grid { grid-template-columns: 1fr; }
+      .category { min-height: auto; }
+      .scene { min-height: 290px; }
+      .pixel-house { transform: translateX(-50%) scale(.8); transform-origin: bottom center; }
+      .block-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .palette-box { padding: 15px; }
+      .footer-top { flex-direction: column; }
+      .mini-stats { gap: 18px; }
+      .searchbar { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<nav>
-<a class="logo" href="#">BLOCK<span>VERSE</span></a>
-<div class="links">
-<a href="#explore">Explore</a>
-<a href="#tools">Tools</a>
-<a href="#about">About</a>
-</div>
-</nav>
-</header>
+  <div class="announcement">
+    🟩 YOUR NEXT BUILD STARTS HERE — inspiracje dla kreatywnych graczy
+  </div>
 
-<main>
-<div class="hero">
-<div class="eyebrow">Your Minecraft universe</div>
-<h1>BUILD YOUR<br><span class="accent">NEXT WORLD.</span></h1>
-<p>Discover amazing mods, shaders, resource packs and builds. Find inspiration and tools for your next Minecraft adventure.</p>
-<div class="actions">
-<a class="btn primary" href="#explore">Explore content ↗</a>
-<a class="btn" href="#tools">Try the Colour Picker</a>
-</div>
-<div class="stats">
-<div><strong>01</strong> Find inspiration</div>
-<div><strong>02</strong> Discover creators</div>
-<div><strong>03</strong> Build something great</div>
-</div>
-</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="BlockyBase — strona główna">
+        <span class="brand-mark" aria-hidden="true"></span>
+        BLOCKY<span>BASE</span>
+      </a>
+      <nav class="nav-links" aria-label="Nawigacja główna">
+        <a href="#explore">Odkrywaj</a>
+        <a href="#palettes">Palety bloków</a>
+        <a href="#resources">Mody i serwery</a>
+        <a class="nav-cta" href="#palettes">🎲 Losuj paletę</a>
+      </nav>
+    </div>
+  </header>
 
-<section id="explore">
-<div class="section-head">
-<div><div class="eyebrow">The collection</div><h2>Explore content<span class="accent">.</span></h2></div>
-<span class="muted">Find your next favourite</span>
-</div>
-<div class="toolbar">
-<input id="search" type="search" placeholder="Search mods, shaders, builds..." aria-label="Search content">
-<select id="category" aria-label="Filter by category">
-<option value="all">All categories</option>
-<option value="Mods">Mods</option>
-<option value="Shaders">Shaders</option>
-<option value="Resource Packs">Resource Packs</option>
-<option value="Builds">Builds</option>
-</select>
-</div>
-<div class="grid" id="cards">
-<article class="card" data-category="Mods" data-name="mods modrinth">
-<div class="card-icon">⚙️</div><span class="tag">MODS</span>
-<h3>Mods & Add-ons</h3>
-<p>Discover new mechanics, useful utilities and fresh ways to play.</p>
-<a class="btn" href="https://modrinth.com/mods" target="_blank" rel="noopener noreferrer">Explore mods ↗</a>
-</article>
-<article class="card" data-category="Shaders" data-name="shaders lighting visuals">
-<div class="card-icon">🌅</div><span class="tag">SHADERS</span>
-<h3>Shaders</h3>
-<p>Explore lighting, water effects, shadows and visual upgrades.</p>
-<a class="btn" href="https://modrinth.com/shaders" target="_blank" rel="noopener noreferrer">Explore shaders ↗</a>
-</article>
-<article class="card" data-category="Resource Packs" data-name="resource packs textures">
-<div class="card-icon">🧱</div><span class="tag">RESOURCE PACKS</span>
-<h3>Resource Packs</h3>
-<p>Find new textures and visual styles for your Minecraft world.</p>
-<a class="btn" href="https://modrinth.com/resourcepacks" target="_blank" rel="noopener noreferrer">Explore packs ↗</a>
-</article>
-<article class="card" data-category="Builds" data-name="builds maps houses castles">
-<div class="card-icon">🏰</div><span class="tag">BUILDS</span>
-<h3>Build Inspiration</h3>
-<p>Browse community projects, architecture and map ideas.</p>
-<a class="btn" href="https://www.planetminecraft.com/projects/" target="_blank" rel="noopener noreferrer">Explore builds ↗</a>
-</article>
-<article class="card" data-category="Mods" data-name="performance optimization mods">
-<div class="card-icon">🚀</div><span class="tag">PERFORMANCE</span>
-<h3>Performance</h3>
-<p>Look for compatible projects that can improve your experience.</p>
-<a class="btn" href="https://modrinth.com/mods" target="_blank" rel="noopener noreferrer">Browse projects ↗</a>
-</article>
-<article class="card" data-category="Resource Packs" data-name="community creations inspiration">
-<div class="card-icon">✨</div><span class="tag">COMMUNITY</span>
-<h3>Creator Picks</h3>
-<p>Discover community-made content and ideas for your next world.</p>
-<a class="btn" href="https://modrinth.com/" target="_blank" rel="noopener noreferrer">Discover more ↗</a>
-</article>
-</div>
-<p id="empty" class="muted" hidden>No matching content found. Try another search.</p>
-</section>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="status-dot"></span> YOUR BLOCK-BUILDING HUB</div>
+          <h1>Think in blocks.<br><span class="green">Build something</span><br>awesome.</h1>
+          <p>
+            Nowe pomysły na budowle, dopasowane palety bloków,
+            ciekawe mody i miejsca do wspólnej gry. Znajdź inspirację
+            i stwórz świat po swojemu.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#palettes">🎲 Generator palet</a>
+            <a class="btn secondary" href="#explore">Odkryj stronę ↘</a>
+          </div>
+          <div class="mini-stats">
+            <div><strong>🧱</strong><span>Pomysły na budowle</span></div>
+            <div><strong>🎨</strong><span>Palety bloków</span></div>
+            <div><strong>🌍</strong><span>Świat społeczności</span></div>
+          </div>
+        </div>
 
-<section id="tools">
-<div class="eyebrow">Made for creators</div>
-<h2>Colour Picker<span class="accent">.</span></h2>
-<p class="muted">Choose a colour and copy its HEX code for your designs.</p>
-<div class="tool-panel">
-<div class="tool-row">
-<input id="picker" type="color" value="#71f59a" aria-label="Choose a colour">
-<div id="swatch" aria-hidden="true"></div>
-<div>
-<label for="hex" class="note">HEX COLOUR</label><br>
-<input id="hex" value="#71F59A" maxlength="7" spellcheck="false" aria-label="HEX colour code">
-</div>
-<button class="btn primary" id="copy">Copy HEX</button>
-</div>
-<p id="copy-status" class="note" role="status">Choose a colour to update the preview.</p>
-</div>
-</section>
+        <div class="scene" role="img" aria-label="Autorska pikselowa ilustracja domku, drzew i gór">
+          <div class="sun"></div>
+          <div class="cloud"></div>
+          <div class="mountain one"></div>
+          <div class="mountain two"></div>
+          <div class="distant-tree tree-a"></div>
+          <div class="distant-tree tree-b"></div>
+          <div class="pixel-spark spark-a">✦</div>
+          <div class="pixel-spark spark-b">✧</div>
+          <div class="pixel-house">
+            <div class="window left"></div>
+            <div class="window right"></div>
+          </div>
+          <div class="ground"></div>
+          <div class="scene-label">WORLD 01 // BUILD MODE</div>
+        </div>
+      </div>
+    </section>
 
-<section id="about">
-<div class="eyebrow">About the project</div>
-<h2>Your world. Your creativity<span class="accent">.</span></h2>
-<p class="muted">BLOCKVERSE is a fan-made discovery hub for Minecraft players and creators. Always check game version compatibility and download files from trusted sources.</p>
-<p class="note">Minecraft is a trademark of Microsoft. This is an unofficial fan project and is not affiliated with or endorsed by Microsoft or Mojang.</p>
-</section>
-</main>
-<footer>BLOCKVERSE © <span id="year"></span> · Made for the Minecraft community</footer>
+    <section class="section" id="explore">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Choose your adventure</div>
+            <h2>Co dziś budujemy?</h2>
+            <p>Wybierz kategorię i znajdź coś na następną rozgrywkę.</p>
+          </div>
+        </div>
 
-<script>
-const search=document.getElementById('search');
-const category=document.getElementById('category');
-const cards=[...document.querySelectorAll('#cards .card')];
-function filterCards(){
- const q=search.value.trim().toLowerCase();
- let count=0;
- cards.forEach(card=>{
-  const matchesText=card.dataset.name.includes(q)||card.innerText.toLowerCase().includes(q);
-  const matchesCategory=category.value==='all'||card.dataset.category===category.value;
-  card.hidden=!(matchesText&&matchesCategory);
-  if(!card.hidden)count++;
- });
- document.getElementById('empty').hidden=count!==0;
-}
-search.addEventListener('input',filterCards);
-category.addEventListener('change',filterCards);
+        <div class="category-grid">
+          <a class="category" href="#resources" data-filter-link="build">
+            <div class="category-icon">🏡</div>
+            <h3>Build ideas</h3>
+            <p>Domki, bazy, zamki i projekty do odtworzenia.</p>
+          </a>
+          <a class="category" href="#resources" data-filter-link="mod">
+            <div class="category-icon">⚙️</div>
+            <h3>Mods</h3>
+            <p>Nowe mechaniki i sposoby na urozmaicenie gry.</p>
+          </a>
+          <a class="category" href="#resources" data-filter-link="server">
+            <div class="category-icon">🌐</div>
+            <h3>Servers</h3>
+            <p>Znajdź społeczność i tryb gry dla siebie.</p>
+          </a>
+          <a class="category" href="#resources" data-filter-link="pack">
+            <div class="category-icon">🖼️</div>
+            <h3>Resource packs</h3>
+            <p>Odkrywaj odmienne style i wygląd świata.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-const picker=document.getElementById('picker');
-const hex=document.getElementById('hex');
-const swatch=document.getElementById('swatch');
-const status=document.getElementById('copy-status');
-function updateColour(value){
- if(!/^#[0-9a-fA-F]{6}$/.test(value))return false;
- const colour=value.toUpperCase();
- picker.value=colour;
- hex.value=colour;
- swatch.style.background=colour;
- status.textContent='Selected colour: '+colour;
- return true;
-}
-picker.addEventListener('input',()=>updateColour(picker.value));
-hex.addEventListener('input',()=>{
- if(/^#[0-9a-fA-F]{6}$/.test(hex.value))updateColour(hex.value);
-});
-document.getElementById('copy').addEventListener('click',async()=>{
- if(!updateColour(hex.value)){status.textContent='Enter a valid HEX code, e.g. #71F59A';return;}
- try{
-  await navigator.clipboard.writeText(hex.value);
-  status.textContent='Copied '+hex.value+' to clipboard!';
- }catch(e){
-  hex.select();
-  status.textContent='Clipboard unavailable. Select the code and copy it manually.';
- }
-});
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+    <section class="section palette-section" id="palettes">
+      <div class="wrap palette-layout">
+        <div class="palette-intro">
+          <div class="kicker">Builder's toolbox</div>
+          <h2>Bloki, które do siebie pasują.</h2>
+          <p>
+            Nie wiesz, jakich bloków użyć do domu, zamku albo bazy?
+            Wylosuj paletę i zobacz zestaw materiałów w podobnym stylu.
+          </p>
+          <p>
+            Każdy kwadrat to autorska, pikselowa próbka koloru i wzoru,
+            a nie oficjalna tekstura gry.
+          </p>
+          <button class="btn" id="randomBtn" type="button">🎲 Losuj nową paletę</button>
+        </div>
+
+        <div class="palette-box">
+          <div class="kicker">Palette generator v1</div>
+          <div class="palette-controls">
+            <select id="styleSelect" aria-label="Wybierz styl budowli">
+              <option value="random">🎲 Dowolny styl</option>
+              <option value="cottage">🌿 Cozy cottage</option>
+              <option value="modern">⬜ Modern house</option>
+              <option value="medieval">🏰 Medieval castle</option>
+              <option value="forest">🌲 Forest base</option>
+              <option value="desert">🏜️ Desert build</option>
+              <option value="ocean">🌊 Ocean base</option>
+            </select>
+            <button class="btn small" id="generateBtn" type="button">Generuj</button>
+          </div>
+          <div class="palette-name" id="paletteName">🌿 Cozy Cottage</div>
+          <div class="palette-desc" id="paletteDesc">Ciepłe drewno, zieleń i naturalny kamień.</div>
+
+          <div class="block-grid" id="blockGrid" aria-live="polite"></div>
+
+          <button class="btn full" id="copyBtn" type="button">📋 Kopiuj listę bloków</button>
+          <div class="palette-note" id="copyStatus" aria-live="polite">
+            To inspiracyjne zestawienie nazw bloków — sprawdź ich dostępność w swojej wersji gry.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The explorer's chest</div>
+            <h2>Odkryj coś nowego.</h2>
+            <p>Wyszukuj kategorie i przechodź do zewnętrznych katalogów.</p>
+          </div>
+          <div class="searchbar">
+            <input id="searchInput" type="search" placeholder="Szukaj: budowle, mody..." aria-label="Szukaj w kartach">
+          </div>
+        </div>
+
+        <div class="resource-grid" id="resourceGrid">
+          <article class="resource-card" data-type="build" data-search="budowle domy zamki inspiracje projekty build ideas">
+            <div class="resource-visual visual-build"><span class="big-emoji">🏡</span></div>
+            <div class="resource-content">
+              <span class="tag">BUILD IDEAS</span>
+              <h3>Inspiracje do budowania</h3>
+              <p>Przeglądaj projekty społeczności: od małych domków po ogromne miasta. Znajdź styl dla swojej kolejnej budowli.</p>
+              <a class="btn full" href="https://www.planetminecraft.com/projects/" target="_blank" rel="noopener noreferrer">Przeglądaj budowle ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-type="mod" data-search="mody mods nowe mechaniki przygoda technologia">
+            <div class="resource-visual visual-mod"><span class="big-emoji">⚙️</span></div>
+            <div class="resource-content">
+              <span class="tag">MODS</span>
+              <h3>Znajdź nowy mod</h3>
+              <p>Odkrywaj mody według popularności i kategorii. Zawsze sprawdzaj wersję gry oraz wymagany loader.</p>
+              <a class="btn full" href="https://modrinth.com/mods" target="_blank" rel="noopener noreferrer">Odkrywaj mody ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-type="server" data-search="serwery servers multiplayer survival skyblock minigames">
+            <div class="resource-visual visual-server"><span class="big-emoji">🌐</span></div>
+            <div class="resource-content">
+              <span class="tag">SERVERS</span>
+              <h3>Znajdź serwer</h3>
+              <p>Przeglądaj listy serwerów i wybieraj według trybu, wersji oraz zasad społeczności. Adresy sprawdź u właściciela serwera.</p>
+              <a class="btn full" href="https://minecraftservers.org/" target="_blank" rel="noopener noreferrer">Szukaj serwerów ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-type="pack" data-search="resource packs paczki zasobów tekstury wygląd style">
+            <div class="resource-visual visual-pack"><span class="big-emoji">🖼️</span></div>
+            <div class="resource-content">
+              <span class="tag">RESOURCE PACKS</span>
+              <h3>Nowy wygląd świata</h3>
+              <p>Znajdź paczki zasobów pasujące do Twojego stylu. Sprawdź zgodność z edycją i wersją gry.</p>
+              <a class="btn full" href="https://modrinth.com/resourcepacks" target="_blank" rel="noopener noreferrer">Przeglądaj paczki ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-type="guide" data-search="poradniki guides budowanie planowanie materiały">
+            <div class="resource-visual visual-guide"><span class="big-emoji">📐</span></div>
+            <div class="resource-content">
+              <span class="tag">BUILD TIPS</span>
+              <h3>Jak ulepszyć budowle?</h3>
+              <p>Zacznij od palety bloków, dodaj głębię ścianom i łącz różne materiały. Małe detale robią różnicę.</p>
+              <a class="btn full" href="#palettes">Wypróbuj palety ↗</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-type="community" data-search="społeczność community projekty gracze inspiracje">
+            <div class="resource-visual visual-community"><span class="big-emoji">🧑‍🤝‍🧑</span></div>
+            <div class="resource-content">
+              <span class="tag">COMMUNITY</span>
+              <h3>Pokaż swój pomysł</h3>
+              <p>Masz ciekawy projekt? Przygotuj zrzuty ekranu i opis. W przyszłości dodamy możliwość zgłaszania prac.</p>
+              <a class="btn full" href="https://www.planetminecraft.com/projects/" target="_blank" rel="noopener noreferrer">Poznaj projekty ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty" id="emptyState">Nie znaleziono kart. Spróbuj innego hasła.</div>
+
+        <div class="notice">
+          ℹ️ To niezależny projekt fanowski. Karty prowadzą do zewnętrznych katalogów —
+          ta strona nie hostuje modów, nie potwierdza dostępności serwerów i nie sprzedaje hostingu.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Small project, big ideas</div>
+            <h2>Co dalej z BlockyBase?</h2>
+            <p>Najpierw użyteczne funkcje. Później — jeśli społeczność będzie chciała — nowe możliwości.</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>🟢 Darmowe funkcje</h3>
+            <p>Chcę, żeby każdy mógł korzystać z podstawowych narzędzi bez płacenia.</p>
+            <ul>
+              <li>Generator palet bloków</li>
+              <li>Inspiracje i poradniki</li>
+              <li>Linki do modów, paczek i katalogów serwerów</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>🚧 Pomysły na przyszłość</h3>
+            <p>To propozycje, a nie aktywne płatne usługi.</p>
+            <ul>
+              <li>Więcej stylów i palet</li>
+              <li>Zapisywanie własnych zestawów</li>
+              <li>Rozbudowana baza projektów społeczności</li>
+              <li>Przewodnik po wyborze hostingu serwera</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="#home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            BLOCKY<span>BASE</span>
+          </a>
+          <p>Inspiracje, narzędzia i odkrywanie nowych pomysłów dla fanów budowania blokowego.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#explore">Kategorie</a>
+          <a href="#palettes">Generator</a>
+          <a href="#resources">Odkrywaj</a>
+          <a href="#about">O stronie</a>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        BlockyBase jest niezależnym projektem fanowskim i nie jest powiązany z Mojang
+        Studios ani Microsoft. Minecraft jest znakiem towarowym odpowiednich właścicieli.
+        Nazwy gier i usług służą wyłącznie do opisu zawartości strony. Grafika pikselowa
+        na tej stronie jest autorską ilustracją CSS. Zewnętrzne strony mają własne zasady,
+        treści i warunki korzystania.
+      </div>
+      <div class="copyright">© <span id="year"></span> BlockyBase · Made for builders 🧱</div>
+    </div>
+  </footer>
+
+  <script>
+    const palettes = {
+      cottage: {
+        name: "🌿 Cozy Cottage",
+        desc: "Ciepłe drewno, zieleń i naturalny kamień.",
+        blocks: [
+          ["Oak Planks", "oak"], ["Mossy Cobblestone", "moss"],
+          ["Grass Block", "grass"], ["Stone Bricks", "stone"],
+          ["Spruce Log", "spruce"]
+        ]
+      },
+      modern: {
+        name: "⬜ Modern House",
+        desc: "Jasne powierzchnie, szkło i proste kontrasty.",
+        blocks: [
+          ["Smooth Quartz", "whiteblock"], ["Glass", "glass"],
+          ["Darkstone style", "darkstone"], ["Stone", "stone"],
+          ["Copper", "copper"]
+        ]
+      },
+      medieval: {
+        name: "🏰 Medieval Castle",
+        desc: "Kamień, ciemne drewno i ceglasty dach.",
+        blocks: [
+          ["Stone Bricks", "stone"], ["Spruce Planks", "spruce"],
+          ["Bricks", "brick"], ["Cobblestone", "darkstone"],
+          ["Oak Planks", "oak"]
+        ]
+      },
+      forest: {
+        name: "🌲 Forest Base",
+        desc: "Leśna baza w naturalnych kolorach.",
+        blocks: [
+          ["Spruce Log", "spruce"], ["Moss Block", "moss"],
+          ["Grass Block", "grass"], ["Oak Planks", "oak"],
+          ["Cobblestone", "stone"]
+        ]
+      },
+      desert: {
+        name: "🏜️ Desert Build",
+        desc: "Piaskowe barwy, ciepłe drewno i cegły.",
+        blocks: [
+          ["Sandstone", "sand"], ["Smooth Quartz", "whiteblock"],
+          ["Bricks", "brick"], ["Oak Planks", "oak"],
+          ["Copper", "copper"]
+        ]
+      },
+      ocean: {
+        name: "🌊 Ocean Base",
+        desc: "Chłodne kolory, szkło i kamienne akcenty.",
+        blocks: [
+          ["Glass", "glass"], ["Stone", "stone"],
+          ["Smooth Quartz", "whiteblock"], ["Darkstone style", "darkstone"],
+          ["Sand", "sand"]
+        ]
+      }
+    };
+
+    const randomBtn = document.getElementById("randomBtn");
+    const generateBtn = document.getElementById("generateBtn");
+    const styleSelect = document.getElementById("styleSelect");
+    const blockGrid = document.getElementById("blockGrid");
+    const paletteName = document.getElementById("paletteName");
+    const paletteDesc = document.getElementById("paletteDesc");
+    const copyBtn = document.getElementById("copyBtn");
+    const copyStatus = document.getElementById("copyStatus");
+
+    let currentPalette = palettes.cottage;
+
+    function showPalette(key) {
+      if (key === "random") {
+        const keys = Object.keys(palettes);
+        const available = keys.filter(item => item !== currentPalette.key);
+        key = available[Math.floor(Math.random() * available.length)];
+      }
+
+      currentPalette = { ...palettes[key], key };
+      paletteName.textContent = currentPalette.name;
+      paletteDesc.textContent = currentPalette.desc;
+      blockGrid.replaceChildren();
+
+      currentPalette.blocks.forEach(([name, texture]) => {
+        const item = document.createElement("div");
+        item.className = "block-item";
+
+        const art = document.createElement("div");
+        art.className = "block-art " + texture;
+        art.setAttribute("aria-hidden", "true");
+
+        const label = document.createElement("span");
+        label.textContent = name;
+
+        item.append(art, label);
+        blockGrid.append(item);
+      });
+
+      copyStatus.textContent =
+        "To inspiracyjne zestawienie nazw bloków — sprawdź ich dostępność w swojej wersji gry.";
+    }
+
+    function generatePalette() {
+      const key = styleSelect.value;
+      showPalette(key);
+    }
+
+    randomBtn.addEventListener("click", () => {
+      styleSelect.value = "random";
+      generatePalette();
+    });
+
+    generateBtn.addEventListener("click", generatePalette);
+    styleSelect.addEventListener("change", generatePalette);
+
+    copyBtn.addEventListener("click", async () => {
+      const text = currentPalette.name + "\n" +
+        currentPalette.blocks.map(([name]) => "• " + name).join("\n");
+
+      try {
+        await navigator.clipboard.writeText(text);
+        copyStatus.textContent = "✅ Skopiowano listę bloków!";
+      } catch (error) {
+        const area = document.createElement("textarea");
+        area.value = text;
+        area.style.position = "fixed";
+        area.style.opacity = "0";
+        document.body.appendChild(area);
+        area.select();
+        const success = document.execCommand("copy");
+        area.remove();
+        copyStatus.textContent = success
+          ? "✅ Skopiowano listę bloków!"
+          : "Nie udało się skopiować automatycznie. Zaznacz i skopiuj nazwy ręcznie.";
+      }
+    });
+
+    // Search cards by title, description, category, or keywords.
+    const searchInput = document.getElementById("searchInput");
+    const cards = [...document.querySelectorAll(".resource-card")];
+    const emptyState = document.getElementById("emptyState");
+
+    function filterCards(query = "") {
+      const term = query.toLowerCase().trim();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const matches = card.dataset.search.toLowerCase().includes(term) ||
+          card.innerText.toLowerCase().includes(term);
+        card.style.display = matches ? "flex" : "none";
+        if (matches) visible++;
+      });
+
+      emptyState.style.display = visible ? "none" : "block";
+    }
+
+    searchInput.addEventListener("input", event => {
+      filterCards(event.target.value);
+    });
+
+    document.querySelectorAll("[data-filter-link]").forEach(link => {
+      link.addEventListener("click", () => {
+        const type = link.dataset.filterLink;
+        searchInput.value = "";
+        cards.forEach(card => {
+          const matches = card.dataset.type === type;
+          card.style.display = matches ? "flex" : "none";
+        });
+        emptyState.style.display = "none";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    showPalette("cottage");
+  </script>
 </body>
 </html>
